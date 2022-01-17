@@ -160,12 +160,13 @@ function scoreboard(inningScoreCB, inningCB, innings) {
     homeScore = homeScore + currentInning.Home
     awayScore = awayScore + currentInning.Away
     scoreByInning.push(`Inning ${i +1}: Away ${currentInning.Away} - Home ${currentInning.Away}`)
-  }
+  
   if(homeScore = awayScore){
     scoreByInning.push(`This game will require extra innings: Away ${currentInning.Away} - Home ${currentInning.Home}`);
   }else{
     scoreByInning.push(`Final Score: Away ${awayScore} - Home ${homeScore}`);
   }
+}
   return scoreByInning;
 }
 
